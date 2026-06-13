@@ -1,0 +1,35 @@
+# ============================================================
+# OCR Playground – requirements.txt
+# Deployment target: Streamlit Community Cloud (Python 3.10+)
+# ============================================================
+
+# ---- Web application ----
+streamlit>=1.32.0
+
+# ---- OCR engines ----
+easyocr>=1.7.1
+pytesseract>=0.3.10
+
+# ---- Image processing ----
+Pillow>=10.2.0
+opencv-python-headless>=4.9.0.80   # headless = no GUI deps (server-safe)
+numpy>=1.26.0
+
+# ---- Data & export ----
+pandas>=2.2.0
+openpyxl>=3.1.2        # for Excel export (Phase 5)
+
+# ---- Visualisation ----
+matplotlib>=3.8.0
+
+# ---- Utilities ----
+# torch & torchvision are pulled in by EasyOCR.
+# Pinning them here ensures CPU-only wheels on Streamlit Cloud.
+torch>=2.1.0
+torchvision>=0.16.0
+
+# ---- Future engines (not yet active — uncomment to enable) ----
+# paddleocr>=2.7.0
+# paddlepaddle>=2.5.0
+# doctr[torch]>=0.8.0
+# transformers>=4.38.0       # for TrOCR
